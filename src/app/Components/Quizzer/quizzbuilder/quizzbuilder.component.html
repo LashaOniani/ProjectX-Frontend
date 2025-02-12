@@ -1,0 +1,25 @@
+<form *ngIf="!info_exsist" [formGroup]="quizzInfo" (ngSubmit)="getInfo()" class="intro">
+    <input type="text" placeholder="Quizz Name" formControlName="quizzName" name="quizzName">
+    <select formControlName="quizzGroup" name="quizzGroup">
+        <option>choose the group</option>
+        <option value="M - 3056 - 70">M - 3056 - 70</option>
+        <option value="D - 6061 - 87">D - 6061 - 87</option>
+    </select>
+    <select formControlName="quizzAbout" name="quizzAbout">
+        <option>Question from</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="Javascript">Javascript</option>
+        <option value="C#">C#</option>
+        <option value="SQL">SQL</option>
+    </select>
+    <input type="number" placeholder="Number of Questions" formControlName="quizzQQuantity" name="quizzQQuantity">
+    
+    <button type="submit" [disabled]="!quizzInfo.valid">შემდეგი</button>
+</form>
+
+<div *ngIf="info_exsist">
+    <ng-container #container></ng-container>
+    <button type="button" (click)="add()" [disabled]="disableAddBtn">დამატება</button>
+    <button type="button" (click)="addAll()">save all</button>
+</div>

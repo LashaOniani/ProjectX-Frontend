@@ -1,0 +1,61 @@
+* {
+    box-sizing: border;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.hands {
+    position: fixed;
+    width: 90rem;
+    height: 50rem;
+    background-image: url("../../public/Assets/Pictures/1693467451_.png");
+    filter: brightness(0.3);
+    background-size: cover;
+    object-fit: cover;
+}
+
+a {
+    color: white;
+    border: 1px solid white;
+    border-radius: 1.6rem;
+    padding: 1.6rem 5rem;
+    cursor: pointer;
+    z-index: 1;
+    position: fixed;
+    border: none;
+}
+
+#pill1 {
+    margin-right: 30rem;
+    margin-top: 20rem;
+    background-color: rgb(131, 0, 0);
+    rotate: 50deg;
+
+    &:hover {
+        transition: ease-in 250ms;
+        background-color: red;
+        box-shadow: 0px 0px 115px red;
+    }
+}
+
+#pill2 {
+    background-color: rgb(0, 128, 179);
+    rotate: -60deg;
+    margin-left: 33rem;
+    margin-top: 18rem;
+
+    &:hover {
+        transition: ease-in 250ms;
+        background-color: rgb(0, 183, 255);
+        box-shadow: 0px 0px 115px rgb(0, 183, 255);
+    }
+}

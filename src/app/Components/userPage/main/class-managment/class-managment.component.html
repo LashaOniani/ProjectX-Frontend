@@ -1,0 +1,26 @@
+<p>class-managment works!</p>
+<button (click)="changeDisplayState('group')">შექმენი ჯგუფი</button>
+<button (click)="changeDisplayState('addPeople')">მოძებნე და დაამატე ჯგუფში ხალხი</button>
+<button (click)="changeDisplayState('closeTheGroup')">დახურე ჯგუფი</button>
+
+<form *ngIf="groupFormDisplayState" [formGroup]="groupForm" (ngSubmit)="createGroup()">
+    <input type="number" placeholder="ჯგუფის ნომერი" formControlName="groupNumber">
+    <select formControlName="groupDegree">
+        <option disabled>საფეხური</option>
+        <option value="დოქტორანტურა">დოქტორანტურა</option>
+        <option value="მაგისტრატურა">მაგისტრატურა</option>
+        <option value="ბაკალავრიატი">ბაკალავრიატი</option>
+    </select>
+    <select formControlName="groupFaculty">
+        <option disabled>ფაკულტეტი</option>
+        <option *ngFor="let eachFaculty of faculties" [value]="eachFaculty.facultyName">{{eachFaculty.facultyName}}</option>
+    </select>
+    <button type="submit">შექმენი ჯგუფი</button>
+</form>
+
+<form>
+    <input type="text" name="nameToFind" placeholder="მოიძიე ვისი დამატება გსურს" [(ngModel)]="nameToFind" (input)="findPeople()">
+    <input type="text" name="groupToFind" placeholder="მოიძიე ჯგუფი" [(ngModel)]="groupToFind" (input)="findGroup()">
+    <button type="submit">დამატება</button>
+
+</form>

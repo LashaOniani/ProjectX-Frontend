@@ -1,0 +1,32 @@
+<ng-container *ngIf="!displaySignUp; else signupContainer">
+    <form [formGroup]="myForm" (ngSubmit)="login()">
+        <input placeholder="UserName" type="text" formControlName="username">
+        <input placeholder="Password" type="password" formControlName="password">
+        <button>submit</button>
+    </form>
+</ng-container>
+
+<ng-template #signupContainer>
+    <form [formGroup]="signUpForm" (ngSubmit)="save()">
+        <input name="firstName" type="text" placeholder="First Name" formControlName="firstName">
+        <input name="lastName" type="text" placeholder="Last Name" formControlName="lastName">
+        <div class="gender">
+            <input id="1" type="radio" name="gender" value="1" formControlName="gender" />
+            <label for="1">
+                კაცი
+            </label>
+        
+            <input id="2" type="radio" name="gender" value="2" formControlName="gender" />
+            <label for="2">
+                ქალი
+            </label>
+        </div>
+        <input name="birthdate" type="date" formControlName="birthdate">
+        <input name="email" type="email" placeholder="Email" formControlName="email">
+        <input name="userName" type="text" placeholder="User_Name" formControlName="userName">
+        <input name="phone" type="Phone" placeholder="Phone Number" formControlName="phone">
+        <input name="password" type="password" placeholder="Password" formControlName="password">
+        <input name="repassword" type="password" placeholder="Re-enter password" formControlName="repassword">
+        <button>Sign Up</button>
+    </form>
+</ng-template>

@@ -1,0 +1,29 @@
+*{
+    user-select: none;
+}
+.error{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text{
+        margin-left: 5rem;
+        color: rgb(12, 216, 12);
+        text-transform: uppercase;
+    }
+    .earth{
+        display: inline-block;
+        // border: 1px solid red;
+        border-radius: 50%;
+        box-shadow: 0px 0px 1000px rgb(12, 216, 12);
+        color: rgb(12, 216, 12);
+        pre{
+            border: none;
+            border-radius: 50%;
+            box-shadow: inset 0 0 30px rgb(12, 216, 12);
+        }
+    }
+}

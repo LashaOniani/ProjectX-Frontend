@@ -1,0 +1,13 @@
+<!-- <p *ngFor="let eachLetter of emptyArr" [style]="{'opacity': eachLetter.opacity + '%'}">{{eachLetter.letter}}</p> -->
+
+ <div [class]="displayRegistration ? 'login signup' : 'login'" class="login">
+    <app-login [displaySignUp]="displayRegistration" class="login-inputs"></app-login>
+ </div>
+ <div class="matrixdrop">
+
+     <app-each-dropdown
+     *ngFor="let time of timesToRepeat"
+     [text]="text"
+     ></app-each-dropdown>
+     
+</div>

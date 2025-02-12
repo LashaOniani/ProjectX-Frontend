@@ -1,0 +1,34 @@
+.plugin{
+    width: 50rem;
+    height: 50rem;
+}
+
+.main-wrapper{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    .main{
+        display: flex;
+        gap: 20px;
+        border: 1px solid red;
+        .main-menu{
+            display: grid;
+            grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+            gap: 20px;
+            button{
+                width: 10rem;
+                height: 10rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.profile{
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid black;
+}

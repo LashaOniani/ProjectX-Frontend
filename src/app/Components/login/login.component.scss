@@ -1,0 +1,99 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+input,
+button {
+    // width: 20rem;
+    height: 2rem;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: rgb(0, 219, 0);
+    outline: noen;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.233);
+    border: 1px solid rgb(0, 219, 0);
+    letter-spacing: 4px;
+}
+
+input::placeholder {
+    color: rgba(0, 219, 0, 0.603);
+}
+
+input:focus {
+    // border: none;
+    outline: none;
+}
+
+button {
+    width: 21rem;
+    background-color: black;
+    outline: none;
+    border: none;
+    color: rgb(0, 219, 0);
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+    border: 1px solid rgb(0, 219, 0);
+    border-radius: 1rem;
+
+}
+
+button:hover {
+    transition: ease 0.5s;
+    background-color: rgb(14, 14, 14);
+}
+
+label{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gender {
+    display: flex;
+    max-width: 21rem;
+    margin-bottom: 0.4rem;
+  
+    label {
+      cursor: pointer;
+      width: 10.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      border-radius: 0.6rem;
+      color: rgba(0, 219, 0, 0.603);
+      
+      &:hover {
+        color: rgb(0, 219, 0);
+        border: 1px solid rgb(0, 219, 0);
+      }
+    }
+  
+    input {
+      display: none;
+    }
+  
+    input:checked + label {
+      font-weight: bold;
+      color: rgb(0, 219, 0);
+      border: 1px solid rgb(0, 219, 0);
+    }
+  }
+  

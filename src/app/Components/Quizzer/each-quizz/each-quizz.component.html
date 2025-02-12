@@ -1,0 +1,25 @@
+<form [formGroup]="quizzbuilder" (ngSubmit)="save()" (input)="check()" (change)="check()">
+    <input type="text" placeholder="question" formControlName="question">
+
+    <div class="optanswer">
+        <input type="text" placeholder="answer 1" formControlName="answer1">
+        <input type="radio" name="is_correct" value="answer1" formControlName="is_correct">
+    </div>
+
+    <div class="optanswer">
+        <input type="text" placeholder="answer 2" formControlName="answer2">
+        <input type="radio" name="is_correct" value="answer2" formControlName="is_correct">
+    </div>
+
+    <div class="optanswer" *ngIf="quizzbuilder.value.answer2">
+        <input type="text" placeholder="answer 3" formControlName="answer3">
+        <input type="radio" name="is_correct" value="answer3" formControlName="is_correct">
+    </div>
+
+    <div class="optanswer" *ngIf="quizzbuilder.value.answer3">
+        <input type="text" placeholder="answer 4" formControlName="answer4">
+        <input type="radio" name="is_correct" value="answer4" formControlName="is_correct">
+    </div>
+
+    <button type="submit" [disabled]="!isValid">submit</button>
+</form>

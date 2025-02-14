@@ -39,7 +39,7 @@ export const routes: Routes = [
         path: 'user',
         title: 'My Page',
         component: MainComponent,
-        canActivate: [authGuard],
+        // canActivate: [authGuard],
         children: [
             {
                 path: 'managment',

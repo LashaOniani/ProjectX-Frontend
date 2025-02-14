@@ -30,7 +30,7 @@ constructor(private userService : UserService, private cd: ChangeDetectorRef, pr
       let parsed = JSON.parse(tokenStorage)
       this.userService.token = parsed.token
     }else{
-        this.rout.navigate(['/'])
+        // this.rout.navigate(['/'])
     }
 
     this.userService.getAuthUser().subscribe({

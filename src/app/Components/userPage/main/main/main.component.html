@@ -25,7 +25,7 @@
 
     </div>
 
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="!displayState"></router-outlet>
 </div>
 <!-- <a routerLink="classManagment"> go to managment</a> -->
 <!-- </router-outlet> -->

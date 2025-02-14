@@ -13,14 +13,36 @@
     </select>
     <select formControlName="groupFaculty">
         <option disabled>ფაკულტეტი</option>
-        <option *ngFor="let eachFaculty of faculties" [value]="eachFaculty.facultyName">{{eachFaculty.facultyName}}</option>
+        <option *ngFor="let eachFaculty of faculties" [value]="eachFaculty.facultyName">{{eachFaculty.facultyName}}
+        </option>
     </select>
     <button type="submit">შექმენი ჯგუფი</button>
 </form>
 
-<form>
-    <input type="text" name="nameToFind" placeholder="მოიძიე ვისი დამატება გსურს" [(ngModel)]="nameToFind" (input)="findPeople()">
+<form *ngIf="addPeopleDisplayState" class="findGroup">
     <input type="text" name="groupToFind" placeholder="მოიძიე ჯგუფი" [(ngModel)]="groupToFind" (input)="findGroup()">
+    <input type="text" name="nameToFind" placeholder="მოიძიე ვისი დამატება გსურს" [(ngModel)]="nameToFind"
+        (input)="findPeople()">
     <button type="submit">დამატება</button>
 
 </form>
+
+<div *ngIf="peopleArr.length" class="card flex items-center gap-2 flex-wrap">
+    <div>
+        <p-chip label="Amy Elsner" image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+            alt="Avatar image" />
+        <p-button icon="pi pi-check" iconPos="right" />
+    </div>
+    <div>
+        <p-chip label="Asiya Javayant" image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png"
+            alt="Avatar image" />
+    </div>
+    <div>
+        <p-chip label="Onyama Limba" image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png"
+            alt="Avatar image" />
+    </div>
+    <div>
+        <p-chip label="Xuxue Feng" image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png"
+            alt="Avatar image" [removable]="true" />
+    </div>
+</div>
